@@ -1,0 +1,27 @@
+form {
+    border: solid 1px lightblue;
+    margin-bottom: 2rem;
+}
+
+h5 {
+    background-color: lightblue;
+    width: 100%;
+    color: white;
+    padding: 10px;
+    margin: 0;
+}
+
+.form-group {
+    margin: 20px;
+}
+
+button {
+    margin: 20px;
+    background-color: lightblue !important;
+    border-color: lightgrey !important;
+}
+
+#trainScheduleContainer {
+    border: solid 1px lightblue;
+    margin: 2rem 0;
+}

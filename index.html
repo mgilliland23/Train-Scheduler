@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Train Scheduler</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/style.css">
+
+    <script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-database.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <div id="trainScheduleContainer">
+            <h5>Current Train Schedule</h5>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Train Name</th>
+                        <th scope="col">Destination</th>
+                        <th scope="col">Frequency (min)</th>
+                        <th scope="col">Next Arrival</th>
+                        <th scope="col">Minutes Away</th>
+
+                    </tr>
+                </thead>
+                <tbody id="trainScheduleBody">
+
+
+                </tbody>
+            </table>
+
+        </div>
+        <form>
+            <h5>Add Train</h5>
+            <div class="form-group">
+                <label for="trainNameInput">Train Name</label>
+                <input type="text" class="form-control" id="trainNameInput" aria-describedby="emailHelp"
+                    placeholder="Enter Train Name">
+            </div>
+            <div class="form-group">
+                <label for="destinationInput">Destination</label>
+                <input type="text" class="form-control" id="destinationInput" aria-describedby="emailHelp"
+                    placeholder="Enter Destination">
+            </div>
+            <div class="form-group">
+                <label for="trainTimeInput">Train time (HH:MM, military time)</label>
+                <input type="text" class="form-control" id="trainTimeInput" aria-describedby="emailHelp"
+                    placeholder="ex: 14:20">
+            </div>
+            <div class="form-group">
+                <label for="frequencyInput">Frequency (min)</label>
+                <input type="text" class="form-control" id="frequencyInput" aria-describedby="emailHelp"
+                    placeholder="ex: 5">
+            </div>
+
+            <button type="submit" id="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+    <script src="assets/logic.js"></script>
+</body>
+
+</html>
